@@ -20,7 +20,7 @@ class Mgmt:
         self._socket.open(HCI_CHANNEL_CONTROL)
 
     def onSocketData(self, data):
-        print('MGMT READING: ', bytes(data).hex())
+        print('MGMT READING: ', bytes(data).encode('hex'))
 
     def onSocketError(self, error):
         if error.message == 'Operation not permitted':
